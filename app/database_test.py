@@ -123,3 +123,9 @@ except:
 print(session.query(user).all())
 
 # ------------- filters and conditions -------------
+# when we want to use >= or <= in filter we should use table name
+user_filter1 = session.query(user).filter(user.age<=17).all()
+print(user_filter1)
+# or we can use where
+user_filter2 = session.query(user).where(user.age<=17).all()
+print(user_filter2)
