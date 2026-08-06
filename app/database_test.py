@@ -4,6 +4,7 @@ from sqlalchemy import Column,Integer,String
 from sqlalchemy.orm import Mapped,mapped_column # important!: these tow module are check the type strictly
 from sqlalchemy.orm import sessionmaker # sessionmaker can make session(session is like cursor)
 from sqlalchemy.orm import DeclarativeBase
+from sqlalchemy import or_,and_,not_ # these are for where method
 
 sql_address = "sqlite:///./first_database.db" # address of database :)
 
